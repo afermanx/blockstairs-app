@@ -21,9 +21,7 @@ Fala Dev!
    ```bash
     npm run build   
   ```
-  ```bash
-    npm run build   
-  ```
+ 
 
   
 - Configure o DB no arquivo .env
