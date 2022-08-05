@@ -29,7 +29,7 @@ Fala Dev!
 - Configure o DB no arquivo .env
     - Altere o APP_NAME=Laravel para APP_NAME=Blockstairs
     
- - Gere a key o APP_KEY
+ - Gere o APP_KEY
  ```bash
     php artisan key:generate  
   ```
