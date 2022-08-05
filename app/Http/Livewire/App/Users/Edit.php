@@ -4,8 +4,9 @@ namespace App\Http\Livewire\App\Users;
 
 use App\Models\User;
 use Livewire\Component;
-use Illuminate\Support\Facades\Hash;
 use WireUi\Traits\Actions;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class Edit extends Component
 {
@@ -99,6 +100,15 @@ class Edit extends Component
                     'password' => $this->password ? Hash::make($this->password) : $this->user->password,
                  ]);
             }
+
+
+
+        if($this->user->id == Auth::user()->id) {
+            Auth::logout();
+            return redirect()->intended(route('home'));
+        }
+
+
 
 
 

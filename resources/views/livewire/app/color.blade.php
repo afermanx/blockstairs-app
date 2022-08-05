@@ -54,6 +54,12 @@
 
             </table>
 
+            @if ($colors->count() == 0)
+                <div class="flex items-center justify-center ">
+                    <div class="" >Não há cor vinculada para esse usuário.</div>
+                </div>
+            @endif
+
 
 
         </div>

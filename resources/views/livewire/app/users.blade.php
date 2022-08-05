@@ -43,20 +43,32 @@
                                     <div class="flex items-center">
                                         <div class="mr-2">
 
-                                            <img class="w-6 h-6 rounded-full" src="https://source.unsplash.com/random/{{ $user->id }}"/>
+                                            <img class="w-8 h-8 rounded-full" src="https://source.unsplash.com/random/{{ $user->id }}"/>
                                         </div>
-                                        <span>{{ $user->name }}</span>
+                                        <div class="grid col-span-1">
+                                            <span>{{ $user->name }}</span>
+                                            <span class="text-xs italic">{{ $user->email }}</span>
+                                        </div>
+
                                     </div>
                                 </td>
                                 <td class="px-6 py-3 text-center">
                                     <div class="flex items-center justify-center">
                                         @foreach ( $user->colors as $color )
 
-                                        <div class="flex items-center justify-center">
+                                        <div class="flex items-center justify-center ">
                                             <div class="w-6 h-6 transform border border-gray-200 rounded-full hover:scale-125" style="background-color: {{ $color->hex }}"></div>
                                         </div>
 
                                         @endforeach
+
+                                        @if ($user->colors->count() == 0)
+
+                                        <div class="flex items-center justify-center ">
+                                            <div class="" >Não há cor vinculada para esse usuário.</div>
+                                        </div>
+
+                                        @endif
 
                                     </div>
                                 </td>
@@ -80,7 +92,9 @@
                     <div class="flex justify-center text-red-500 lg:text-xl sm:tex-sm md:text-base "> Nenhum usuário encontrado com o nome: {{ $search }}</div>
 
                     @endif
-                    {{ $users->links() }}
+                    <div class="p-2">
+                        {{ $users->links() }}
+                    </div>
 
 
 

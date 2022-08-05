@@ -31,7 +31,8 @@ class Users extends Component
     {
         return view('livewire.app.users',[
             'users' => User::when($this->search, fn($q)=>$q->where('name','like','%'.$this->search.'%'))
-            ->paginate(10)
+            ->orderBy('id', 'desc')
+            ->paginate(5)
         ]);
 
     }

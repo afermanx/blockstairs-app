@@ -23,7 +23,7 @@ class Delete extends Component
 
         $this->dialog()->confirm([
             'title'       => 'Tem certeza?',
-            'description' => 'A o deletar o usuário '.$this->user->name.', todos os dados serão perdidos.',
+            'description' => 'Ao deletar o usuário '.$this->user->name.', todos os dados serão perdidos.',
             'icon'        => 'question',
             'accept'      => [
                 'label'  => 'Sim, deletar',
