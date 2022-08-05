@@ -13,16 +13,31 @@ Fala Dev!
 - Fazer o clone do repositório.
 - Rodar os comandos abaixo:
   ```bash
-    cd blockstairs-app
-    composer install && npm i
-    npm run dev   
+    cd blockstairs-app     
   ```
-  
-- Configure o .env e depois rode as migrations.
+  ```bash
+    composer install && npm i    
+  ```
    ```bash
-    php artisan migrate --seed 
-    
+    npm run build   
   ```
+  ```bash
+    npm run build   
+  ```
+
+  
+- Configure o DB no arquivo .env
+    - Altere o APP_NAME=Laravel para APP_NAME=Blockstairs
+    
+ - Gere a key o APP_KEY
+ ```bash
+    php artisan key:generate  
+  ```
+- Rode as migrations.
+```bash
+php artisan migrate --seed 
+
+```
 Se deu tudo certo até aqui, agora é assistir um pequeno vídeo com o passo a passo abaixo, faz rodar e divirta-se 😁.
 
 [<img src="https://blockstairs.com/wp-content/uploads/2022/07/tezos-cJgb-y17rKM-unsplash-1-scaled.jpg" width="50%">](https://www.loom.com/share/abec189b221d4899a104b089ef1cbdf4 "Click e confira o vídeo")
