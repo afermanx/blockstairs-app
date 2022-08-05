@@ -11,10 +11,9 @@ class Color extends Component
      public $user;
 
      protected $listeners = [
-         'registered'=>'$refresh',
-         'deleted'=>'$refresh',
-         'updated'=>'$refresh',
-         'colorLiked'=>'$refresh'
+
+         'colorLiked'=>'$refresh',
+         'desvinculada'=>'$refresh'
          ];
 
     public function render()

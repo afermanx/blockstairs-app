@@ -25,9 +25,10 @@
     </head>
 
     <body>
-        <x-dialog />
-        <x-notifications position="bottom-center" />
+
         @yield('body')
+        <x-dialog z-index="z-50" blur="md"  />
+        <x-notifications position="bottom-center" />
     </body>
     @wireUiScripts
     <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>

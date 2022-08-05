@@ -15,7 +15,7 @@ class Delete extends Component
     * @property User $user
     */
 
-public User $user;
+    public User $user;
 
     public function delete()
     {
@@ -54,7 +54,7 @@ public User $user;
             'icon'        => 'success'
         ]);
 
-     
+
         $this->emit('deleted');
     }
 }

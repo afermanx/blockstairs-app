@@ -42,7 +42,7 @@
 
                         <td class="px-6 py-3 text-center">
                             <div class="flex justify-center item-center">
-                                <livewire:app.color.delete  :color="$colors" :key="$colors.'delete'" />
+                                <livewire:app.color.delete  :color="$color" :key="$color.'delete'" />
                             </div>
                         </td>
                     </tr>
@@ -53,13 +53,6 @@
 
 
             </table>
-
-
-          {{--   @if ($colors->count() == 0)
-            <div class="flex justify-center text-red-500 lg:text-xl sm:tex-sm md:text-base "> Nenhum cor encontrada com o nome: {{ $search }}</div>
-
-            @endif --}}
-
 
 
 
