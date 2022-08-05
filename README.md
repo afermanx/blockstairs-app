@@ -1,6 +1,5 @@
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://blockstairs.com/wp-content/uploads/2022/07/icon_positivo_500x500.png" width="300"></a></p>'
-
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://blockstairs.com/wp-content/uploads/2022/07/icon_positivo_500x500.png" width="300"></a></p>
 <h1 align="center">Blockstairs</h1>
 
 
@@ -25,4 +24,11 @@ Fala Dev!
     
   ```
 Se deu tudo certo até aqui, agora é so assistir um pequeno video com o passo a passo a baixo, faz rodar e divirta-se 😁.
+
+https://user-images.githubusercontent.com/31674845/183162647-a2404891-a218-4d0c-9ec8-44ac389b32fe.mp4
+
+
+
+
+
 
