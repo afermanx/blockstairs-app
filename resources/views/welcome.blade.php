@@ -9,7 +9,7 @@
                         <a
                             href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                            class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+                            class="font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline"
                         >
                             Sair
                         </a>
@@ -18,10 +18,10 @@
                             @csrf
                         </form>
                     @else
-                        <a href="{{ route('login') }}" class=" border p-2 bg-indigo-600 text-white font-medium hover:text-indigo-600 hover:bg-white focus:outline-none focus:underline transition ease-in-out duration-150">Logar</a>
+                        <a href="{{ route('login') }}" class="p-2 font-medium text-white transition duration-150 ease-in-out bg-indigo-600 border hover:text-indigo-600 hover:bg-white focus:outline-none focus:underline">Logar</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="border p-2 bg-indigo-600 text-white font-medium hover:text-indigo-600 hover:bg-white focus:outline-none focus:underline transition ease-in-out duration-150">Registrar</a>
+                            <a href="{{ route('register') }}" class="p-2 font-medium text-white transition duration-150 ease-in-out bg-indigo-600 border hover:text-indigo-600 hover:bg-white focus:outline-none focus:underline">Registrar</a>
                         @endif
                     @endauth
                 </div>
@@ -40,21 +40,21 @@
                     </h1>
 
                     <h3 class="text-2xl font-extrabold tracking-wider text-center text-gray-600">
-                       Stacks usadas para desenvolvimento da aplicações de teste web.
+                       Stacks usadas para desenvolvimento da aplicação web.
                     </h3>
 
-                    <ul class="list-reset flex justify-center">
+                    <ul class="flex justify-center list-reset">
                         <li class="inline px-4">
-                            <a href="https://tailwindcss.com" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">Tailwind CSS</a>
+                            <a href="https://tailwindcss.com" class="font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline">Tailwind CSS</a>
                         </li>
                         <li class="inline px-4">
-                            <a href="https://github.com/alpinejs/alpine" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">Alpine.js</a>
+                            <a href="https://github.com/alpinejs/alpine" class="font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline">Alpine.js</a>
                         </li>
                         <li class="inline px-4">
-                            <a href="https://laravel.com" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">Laravel</a>
+                            <a href="https://laravel.com" class="font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline">Laravel</a>
                         </li>
                         <li class="inline px-4">
-                            <a href="https://laravel-livewire.com" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">Livewire</a>
+                            <a href="https://laravel-livewire.com" class="font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline">Livewire</a>
                         </li>
                     </ul>
                 </div>

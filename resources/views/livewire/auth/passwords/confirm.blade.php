@@ -34,7 +34,7 @@
                 <div class="flex items-center justify-end mt-6">
                     <div class="text-sm leading-5">
                         <a href="{{ route('password.request') }}" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">
-                            Forgot your password?
+                            Esqueceu sua senha?
                         </a>
                     </div>
                 </div>

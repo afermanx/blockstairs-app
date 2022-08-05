@@ -22,6 +22,17 @@ class Login extends Component
         'password' => ['required'],
     ];
 
+
+    /** @var array*/
+    #uso para fazer o translate do error message
+     protected $messages = [
+        'email.required' => 'O campo Email é obrigatório.',
+        'email.email' => 'O campo Email deve ser um e-mail válido.',
+        'password.required' => 'O campo Senha é obrigatório.',
+    
+
+    ];
+
     public function authenticate()
     {
         $this->validate();

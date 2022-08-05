@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\App\Color;
 
+use App\Models\Color;
 use Livewire\Component;
 
 class Create extends Component
@@ -13,9 +14,27 @@ class Create extends Component
     /** @var string */
     public $color = '';
 
+
       /** @var string */
       public $description = '';
 
+      protected $rules=[
+        'description' => ['required'],
+        'color' => ['required'],
+    ];
+
+    /** @var array*/
+    #uso para fazer o translate da message do errro
+    protected $messages = [
+        'description.required' => 'O campo descrição é obrigatório.',
+        'color.required' => 'Escolha um cor antes de continuar.',
+
+
+    ];
+
+
+
+    # converte de hexadecimal para rgb e retorna uma string no fromato rgb(r,g,b)
     function hex2Rgb($hex):string
     {
 
@@ -37,12 +56,17 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.app.color.create');
+        return view('livewire.app.color.create',[
+            'colors' => Color::all()
+        ]);
+
     }
 
-
+    # vincular nova color
     public function addColor()
     {
+
+        $this->validate();
         $this->user->colors()-> create([
             'description' => $this->description,
             'hex' => $this->color,

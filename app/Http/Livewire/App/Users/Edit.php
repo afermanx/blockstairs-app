@@ -51,22 +51,27 @@ class Edit extends Component
 
     ];
 
-     public function mount()
+     public function edit()
      {
+
         $this->name = $this->user->name;
         $this->email = $this->user->email;
+
+        $this->modalUserUpdate = true;
 
 
 
      }
 
 
-     public function edit()
+     public function update()
      {
+
+
         if($this->password){
             $this->validate([
                 'name' => ['required'],
-                'email' => ['required', 'email', 'unique:users'],
+                'email' => ['required', 'email',],
                 'password' => ['required', 'min:6', 'same:passwordConfirmation'],
             ]);
 
@@ -104,6 +109,7 @@ class Edit extends Component
         ]);
 
 
+        $this->modalUserUpdate = false;
 
          $this->emit('updated');
      }

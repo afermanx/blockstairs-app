@@ -42,7 +42,8 @@
                                 <td class="px-6 py-3 text-left">
                                     <div class="flex items-center">
                                         <div class="mr-2">
-                                            <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"/>
+
+                                            <img class="w-6 h-6 rounded-full" src="https://source.unsplash.com/random/{{ $user->id }}"/>
                                         </div>
                                         <span>{{ $user->name }}</span>
                                     </div>
@@ -56,7 +57,7 @@
                                         </div>
 
                                         @endforeach
-                                       
+
                                     </div>
                                 </td>
 

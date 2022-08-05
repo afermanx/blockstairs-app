@@ -4,6 +4,7 @@ namespace App\Http\Livewire\App\Users;
 
 use App\Models\Color;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use WireUi\Traits\Actions;
 
@@ -46,6 +47,7 @@ class Delete extends Component
 
     public function destroy()
     {
+
          $this->user->delete();
 
          $this->notification([
@@ -53,6 +55,15 @@ class Delete extends Component
             'description' => 'Usuário deletado com sucesso!',
             'icon'        => 'success'
         ]);
+
+
+        if($this->user->id == Auth::user()->id) {
+            Auth::logout();
+            return redirect()->intended(route('home'));
+        }
+
+
+
 
 
         $this->emit('deleted');
